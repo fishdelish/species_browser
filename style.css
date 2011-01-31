@@ -1,0 +1,108 @@
+body {
+    font-family: Georgia;
+    padding: 10px;
+    margin: 10px;
+    background: #ccc}
+
+#content {
+    background: #fff;
+    padding: 10px;
+    border: solid #888 2px;
+}
+
+#footer {
+/*    background: #fff; */
+    padding: 10px;
+    font-size: 50%;
+    text-align: right;
+}
+.fblink {
+    text-align: right;
+    font-size: 75%;
+}
+.name {
+    font-size: 150%; 
+    margin-bottom: 10px
+}
+
+.scientific {
+    font-style: italic;
+}
+.picture {
+    display:block;
+    text-align: center;
+    padding: 10px;
+    float: right;
+}
+.picture .caption {
+    font-style: italic;
+}
+.thumb {
+    border: solid #888 2px;
+}
+.detail {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.category {
+    font-weight:bold;
+    color: #888
+}
+.value {
+//    font-style: italic;
+    margin-left: 10px;
+}
+.source {
+    color: #888;
+}
+.externals {
+    float: right;
+    text-align: right;
+    padding: 20px;
+    background-color: #eee
+}
+
+.iucn {
+    border: solid #888 1px;
+    margin-tiop: 2px;
+}
+.iucn .ex {
+    background-color: black;
+    color: white;
+}
+.iucn .ew {
+    background-color: black;
+    color: white;
+}
+.iucn .ce {
+    background-color: red;
+    color: white;
+}
+.iucn .nt {
+    background-color: red;
+    color: white;
+}
+.iucn .en {
+    background-color: red;
+    color: white;
+}
+.vu {
+    background-color: red;
+    color: white;
+}
+.iucn .lr {
+    background-color: green;
+    color: white;
+}
+.iucn .lc {
+    background-color: green;
+    color: white;
+}
+.iucn .dd {
+    background-color: yellow;
+    color: gray;
+}
+.iucn .ne {
+    background-color: white;
+    color: gray;
+}
