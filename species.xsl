@@ -45,6 +45,8 @@
 <xsl:variable name="refauthor" select="sparql:results/sparql:result[1]/sparql:binding[@name='refauthor']"/>
 <xsl:variable name="refno" select="sparql:results/sparql:result[1]/sparql:binding[@name='refno']"/>
 <xsl:variable name="refdate" select="sparql:results/sparql:result[1]/sparql:binding[@name='refyear']"/>
+<xsl:variable name="collaborator" select="sparql:results/sparql:result[1]/sparql:binding[@name='collaborator']"/>
+<xsl:variable name="collaboratorid" select="sparql:results/sparql:result[1]/sparql:binding[@name='collaboratorid']"/>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
        <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
@@ -72,6 +74,8 @@
 	  <img class="thumb"><xsl:attribute name="src">http://www.fishbase.org/images/thumbnails/<xsl:value-of select="$imagetype"/>/tn_<xsl:value-of select="$pic"/></xsl:attribute><xsl:attribute name="alt"><xsl:value-of select="$common"/></xsl:attribute></img>
 	<div class="caption"><xsl:value-of select="$genus"/><xsl:text> </xsl:text>
          <xsl:value-of select="$species"/>
+         <br/>
+         Picture provided by <a><xsl:attribute name="href">http://www.fishbase.org/Collaborators/CollaboratorSummary.php?ID=<xsl:value-of select="$collaboratorid"/></xsl:attribute><xsl:value-of select="$collaborator" /></a>
 	</div>
         </div>
 	</xsl:if>
