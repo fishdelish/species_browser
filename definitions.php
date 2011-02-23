@@ -52,12 +52,13 @@ WHERE {
  OPTIONAL {%URI% fish:species_DemersPelag ?demerspelag.}
  OPTIONAL {%URI% fish:species_AnaCat ?anacat.}
  OPTIONAL {%URI% fish:species_PicPreferredName ?pic.
-           ?pic_node fish:picturesmain_SpecCode %URI%.
-           ?pic_node fish:picturesmain_PicName ?pic.
-           ?pic_node fish:picturesmain_Entered ?collaboratorid.
-           ?collaborator_node fish:collaborators_Personnel ?collaboratorid.
-           ?collaborator_node fish:collaborators_Surname ?collaborator. }
-          
+           OPTIONAL {
+             ?pic_node fish:picturesmain_SpecCode %URI%.
+             ?pic_node fish:picturesmain_PicName ?pic.
+             ?pic_node fish:picturesmain_Entered ?collaboratorid.
+             ?collaborator_node fish:collaborators_Personnel ?collaboratorid.
+             ?collaborator_node fish:collaborators_Surname ?collaborator. }
+          }
  OPTIONAL {%URI% fish:species_Dangerous ?danger.}
 
 }
