@@ -6,7 +6,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX fish: <http://fishdelish.cs.man.ac.uk/rdf/vocab/resource/>
 
 SELECT ?common ?code ?genus ?species ?subfamily 
-       ?author ?biology ?distribution 
+       ?author ?refno ?refauthor ?refyear ?biology ?distribution 
        ?iucnCode ?iucnAssessment
        ?demerspelag ?anacat
        ?depthshallow ?depthdeep ?depthcommondeep 
@@ -22,6 +22,10 @@ WHERE {
  %URI% fish:species_Species ?species.
  OPTIONAL {%URI% fish:species_Author ?author}.
  OPTIONAL {%URI% fish:species_FBname ?common}.
+ OPTIONAL {%URI% fish:species_SpeciesRefNo ?refno}.
+ OPTIONAL {?ref fish:refrens_RefNo ?refno}.
+ OPTIONAL {?ref fish:refrens_Author ?refauthor}.
+ OPTIONAL {?ref fish:refrens_Year ?refyear}.
  OPTIONAL {%URI% fish:species_Subfamily ?subfamily.}
  OPTIONAL {%URI% fish:species_Comments ?biology.}
  OPTIONAL {?stocks fish:stocks_SpecCode %URI%.

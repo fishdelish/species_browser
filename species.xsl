@@ -42,7 +42,9 @@
 <xsl:variable name="description" select="sparql:results/sparql:result[1]/sparql:binding[@name='description']"/>
 <xsl:variable name="danger" select="sparql:results/sparql:result[1]/sparql:binding[@name='danger']"/>
 <xsl:variable name="pic" select="sparql:results/sparql:result[1]/sparql:binding[@name='pic']"/>
-
+<xsl:variable name="refAuthor" select="sparql:results/sparql:result[1]/sparql:binding[@name='refno']"/>
+<xsl:variable name="refNo" select="sparql:results/sparql:result[1]/sparql:binding[@name='refauthor']"/>
+<xsl:variable name="refDate" select="sparql:results/sparql:result[1]/sparql:binding[@name='refyear']"/>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
        <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
@@ -93,7 +95,7 @@
         <div class="details">
             <div class="detail">
                 <div class="category">Main Reference</div>
-                <div class="value"><xsl:value-of select="$author"/></div>
+                <div class="value"><a><xsl:attribute name="href">http://fishbase.org/references/FBRefSummary.php?ID=<xsl:value-of select="$refno"/></xsl:attribute><xsl:value-of select="$refauthor"/>, <xsl:value-of select="$refdate" /></a></div>
             </div>
             <div class="detail">
                 <div class="category">Size</div>
