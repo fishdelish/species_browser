@@ -42,9 +42,9 @@
 <xsl:variable name="description" select="sparql:results/sparql:result[1]/sparql:binding[@name='description']"/>
 <xsl:variable name="danger" select="sparql:results/sparql:result[1]/sparql:binding[@name='danger']"/>
 <xsl:variable name="pic" select="sparql:results/sparql:result[1]/sparql:binding[@name='pic']"/>
-<xsl:variable name="refAuthor" select="sparql:results/sparql:result[1]/sparql:binding[@name='refno']"/>
-<xsl:variable name="refNo" select="sparql:results/sparql:result[1]/sparql:binding[@name='refauthor']"/>
-<xsl:variable name="refDate" select="sparql:results/sparql:result[1]/sparql:binding[@name='refyear']"/>
+<xsl:variable name="refauthor" select="sparql:results/sparql:result[1]/sparql:binding[@name='refauthor']"/>
+<xsl:variable name="refno" select="sparql:results/sparql:result[1]/sparql:binding[@name='refno']"/>
+<xsl:variable name="refdate" select="sparql:results/sparql:result[1]/sparql:binding[@name='refyear']"/>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
        <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
