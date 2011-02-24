@@ -14,7 +14,7 @@ SELECT ?common ?code ?genus ?species ?subfamily
        ?family ?order ?class
        ?description 
        ?danger
-       ?pic
+       ?pic ?picid
        ?collaborator ?collaboratorid
 WHERE {
  %URI% fish:species_Genus ?genus.
@@ -54,6 +54,7 @@ WHERE {
  OPTIONAL {%URI% fish:species_PicPreferredName ?pic.
            ?pic_node fish:picturesmain_SpecCode %URI%.
            ?pic_node fish:picturesmain_PicName ?pic.
+           ?pic_node fish:picturesmain_autoctr ?picid.
            ?pic_node fish:picturesmain_Entered ?collaboratorid.
            ?pic_node fish:picturesmain_AuthName ?collaborator.
           }

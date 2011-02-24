@@ -42,6 +42,7 @@
 <xsl:variable name="description" select="sparql:results/sparql:result[1]/sparql:binding[@name='description']"/>
 <xsl:variable name="danger" select="sparql:results/sparql:result[1]/sparql:binding[@name='danger']"/>
 <xsl:variable name="pic" select="sparql:results/sparql:result[1]/sparql:binding[@name='pic']"/>
+<xsl:variable name="picid" select="sparql:results/sparql:result[1]/sparql:binding[@name='picid']"/>
 <xsl:variable name="refauthor" select="sparql:results/sparql:result[1]/sparql:binding[@name='refauthor']"/>
 <xsl:variable name="refno" select="sparql:results/sparql:result[1]/sparql:binding[@name='refno']"/>
 <xsl:variable name="refdate" select="sparql:results/sparql:result[1]/sparql:binding[@name='refyear']"/>
@@ -71,7 +72,10 @@
 	  <xsl:if test="contains($pic,'.gif')">gif</xsl:if>
 	  </xsl:variable>
 	  <!-- end Horrible Hack -->
-	  <img class="thumb"><xsl:attribute name="src">http://www.fishbase.org/images/thumbnails/<xsl:value-of select="$imagetype"/>/tn_<xsl:value-of select="$pic"/></xsl:attribute><xsl:attribute name="alt"><xsl:value-of select="$common"/></xsl:attribute></img>
+    <a>
+      <xsl:attribute name="href">http://www.fishbase.org/Photos/PicturesSummary.php?ID=<xsl:value-of select="$picid"/>&amp;what=species</xsl:attribute>
+	    <img class="thumb"><xsl:attribute name="src">http://www.fishbase.org/images/thumbnails/<xsl:value-of select="$imagetype"/>/tn_<xsl:value-of select="$pic"/></xsl:attribute><xsl:attribute name="alt"><xsl:value-of select="$common"/></xsl:attribute></img>
+    </a>
 	<div class="caption"><xsl:value-of select="$genus"/><xsl:text> </xsl:text>
          <xsl:value-of select="$species"/>
          <br/>
