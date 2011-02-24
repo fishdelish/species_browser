@@ -181,7 +181,7 @@
 	  <a href="http://fishdelish.cs.man.ac.uk">FishDelish</a> Project, (c) <a href="http://www.fishbase.org">Fishbase</a>, January 2011.
     <br/>
     <a>
-      <xsl:attribute name="href">/query.php?uri=http://fishdelish.cs.man.ac.uk/rdf/species/<xsl:value-of select="$genus" />/<xs:value-of select="$species" /></xsl:attribute>
+      <xsl:attribute name="href">query.php?uri=http://fishdelish.cs.man.ac.uk/rdf/species/<xsl:value-of select="$genus" />/<xsl:value-of select="$species" /></xsl:attribute>
       See the query for this species
     </a>
 	</div>

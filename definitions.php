@@ -56,8 +56,9 @@ WHERE {
              ?pic_node fish:picturesmain_SpecCode %URI%.
              ?pic_node fish:picturesmain_PicName ?pic.
              ?pic_node fish:picturesmain_Entered ?collaboratorid.
-             ?collaborator_node fish:collaborators_Personnel ?collaboratorid.
-             ?collaborator_node fish:collaborators_Surname ?collaborator. }
+             ?collaborator_node fish:collaborators_Personnel ?collaboratorid2.
+             ?collaborator_node fish:collaborators_Surname ?collaborator.
+             FILTER(?collaboratorid = ?collaboratorid2) }
           }
  OPTIONAL {%URI% fish:species_Dangerous ?danger.}
 
