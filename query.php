@@ -4,6 +4,11 @@ include("functions.php");
 
 header("Content-Type: text/plain");
 
-echo SPECIES_QUERY;
+$query = SPECIES_QUERY;
+
+if ($_GET['uri']) {
+  $query = str_replace('%URI%', '<'.$_GET['uri'].'>', SPECIES_QUERY);
+}
+echo $query;
 
 ?>
