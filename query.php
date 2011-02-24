@@ -12,6 +12,6 @@ if ($_GET['uri']) {
 echo $query;
 if ($_GET['uri']) {
   echo "\nResults:\n";
-  echo sparqlQueryXML( $query );   
+  echo sparqlQueryXML( $query )->saveXML();   
 }
 ?>
