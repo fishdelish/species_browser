@@ -10,5 +10,8 @@ if ($_GET['uri']) {
   $query = str_replace('%URI%', '<'.$_GET['uri'].'>', SPECIES_QUERY);
 }
 echo $query;
-
+if ($_GET['uri']) {
+  echo "\nResults:\n";
+  echo sparqlQueryXML( $query );   
+}
 ?>
