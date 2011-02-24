@@ -73,7 +73,7 @@
 	  </xsl:variable>
 	  <!-- end Horrible Hack -->
     <a>
-      <xsl:attribute name="href">http://www.fishbase.org/Photos/PicturesSummary.php?ID=<xsl:value-of select="$picid"/>&amp;what=species</xsl:attribute>
+      <xsl:attribute name="href">http://www.fishbase.org/Photos/PicturesSummary.php?ID=<xsl:value-of select="$code"/>&amp;what=species</xsl:attribute>
 	    <img class="thumb"><xsl:attribute name="src">http://www.fishbase.org/images/thumbnails/<xsl:value-of select="$imagetype"/>/tn_<xsl:value-of select="$pic"/></xsl:attribute><xsl:attribute name="alt"><xsl:value-of select="$common"/></xsl:attribute></img>
     </a>
 	<div class="caption"><xsl:value-of select="$genus"/><xsl:text> </xsl:text>
